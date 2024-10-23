@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000;
+}
+.wrapper{
+    position: relative;
+    height: 500px;
+    width: 400px;
+    /* background: #0ef; */
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 0 50px #0ef;
+    transition: 1s ease;
+}
+
+.wrapper:hover{
+    animation: animate 1s linear infinite;
+}
+@keyframes animate {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+/* .wrapper .active .form-wrapper .signin{
+    transform: translateY(-450px);
+}
+.wrapper .form-wrapper .signup{
+    position: absolute;
+    top: 450px;
+    left: 0;
+}
+.wrapper .active .form-wrapper .signup{
+    transform: translateY(-450px);
+} */
+h2{
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+.input-group{
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+.input-group label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s ease;
+}
+.input-group input{
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.input-group input:focus~label{
+    top: -5px;
+}
+
+.remember{
+    margin: -5px 0 15px 5px;
+}
+.remember label{
+    font-size: 14px;
+    color: #fff;
+}
+.remember input{
+    accent-color: #0ef;
+}
+button{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    border-radius: 30px;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+.signup-link{
+    text-align: center;
+    margin:  15px 0;
+    font-size: 14px;
+}
+.signup-link p{
+    color: #fff;
+}
+.signup-link p a{
+    text-decoration: none;
+    color: #0ef;
+    transition: .5s ease;
+}
+.signup-link p a:hover{
+    text-decoration: underline;
+}
+
+@media(max-width:500px){
+    .wrapper{
+        width: 300px;
+        height: 400px;
+    }
+    .form-wrapper{
+        height: 100%;
+        width: 100%;
+    }
+    h2{
+        font-size: 28px;
+    }
+    .input-group{
+        margin: 30px 40px;
+    }
+    .input-group label{
+        margin-left: 0px;
+    }
+    .input-group input{
+        width: 260px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .remember{
+        margin-left: 40px;
+        font-size: 12px;
+    }
+    button{
+        height: 30px;
+        font-size: 14px;
+        width: 80%;
+        margin: 0 10%;
+}
+.signup-link{
+    font-size: 12px;
+}
+}
